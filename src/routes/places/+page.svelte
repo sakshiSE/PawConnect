@@ -17,6 +17,7 @@
       name: 'Veterinary Hospital — Tonca',
       category: 'Veterinary',
       area: 'Tonca, Panaji',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Veterinary+Hospital+Tonca+Panaji+Goa',
       icon: '🏥',
       description:
         'Government veterinary service serving the Tiswadi area. Useful for veterinary assistance and animal health services.'
@@ -25,6 +26,7 @@
       name: 'Veterinary Hospital — Mapusa',
       category: 'Veterinary',
       area: 'Mapusa, North Goa',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Veterinary+Hospital+Mapusa+Goa',
       icon: '🐾',
       description:
         'Government veterinary hospital serving the Mapusa area.'
@@ -33,6 +35,7 @@
       name: 'Veterinary Hospital — Sonsodo',
       category: 'Veterinary',
       area: 'Sonsodo, Goa',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Veterinary+Hospital+Sonsodo+Goa',
       icon: '🏥',
       description:
         'Government veterinary hospital providing animal health support.'
@@ -41,6 +44,7 @@
       name: 'Veterinary Hospital — Curti-Ponda',
       category: 'Veterinary',
       area: 'Curti, Ponda',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Veterinary+Hospital+Curti+Ponda+Goa',
       icon: '🐶',
       description:
         'Government veterinary hospital serving the Ponda area.'
@@ -49,6 +53,7 @@
       name: 'Veterinary Hospital — Honda',
       category: 'Veterinary',
       area: 'Honda, Goa',
+       mapLink: 'https://www.google.com/maps/search/?api=1&query=Veterinary+Hospital+Honda+Goa',
       icon: '🐱',
       description:
         'Government veterinary hospital serving animals in the surrounding area.'
@@ -57,6 +62,7 @@
       name: 'Veterinary Dispensary — Canacona',
       category: 'Veterinary',
       area: 'Canacona, South Goa',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Veterinary+Dispensary+Canacona+Goa',
       icon: '🏥',
       description:
         'Government veterinary dispensary serving the Canacona area.'
@@ -65,6 +71,7 @@
       name: 'Veterinary Dispensary — Calangute',
       category: 'Veterinary',
       area: 'Calangute, North Goa',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Veterinary+Dispensary+Calangute+Goa',
       icon: '🐾',
       description:
         'Government veterinary dispensary serving the Calangute area.'
@@ -73,6 +80,7 @@
       name: 'Veterinary Dispensary — Vasco',
       category: 'Veterinary',
       area: 'Vasco, Goa',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Veterinary+Dispensary+Vasco+Goa',
       icon: '🐶',
       description:
         'Government veterinary dispensary serving the Vasco area.'
@@ -81,6 +89,7 @@
       name: 'Mobile Veterinary Services',
       category: 'Animal Help',
       area: 'Goa',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Mobile+Veterinary+Services+Goa',
       icon: '🚑',
       description:
         'Goa has mobile veterinary services intended to improve access to veterinary assistance.'
@@ -89,6 +98,7 @@
       name: 'Animal Welfare & Rescue Support',
       category: 'Animal Help',
       area: 'Goa',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=Animal+Welfare+Rescue+Goa',
       icon: '❤️',
       description:
         'Use PawConnect Animal Help to report an injured animal or offer your help to another person.'
@@ -97,6 +107,7 @@
       name: 'Pet-Friendly Places',
       category: 'Animal-Friendly',
       area: 'Goa',
+      mapLink: 'https://www.google.com/maps/search/?api=1&query=pet+friendly+places+Goa',
       icon: '☕',
       description:
         'Explore animal-friendly locations and spaces when spending time with your companion.'
@@ -225,16 +236,20 @@
             {place.description}
           </p>
 
-          {#if place.category === 'Animal Help'}
+          {#if place.category === 'Animal Help' && place.name === 'Animal Welfare & Rescue Support'}
             <a href="/help" class="place-link">
-              Go to Animal Help →
+                Go to Animal Help →
             </a>
-          {:else}
-            <div class="information-label">
-              ℹ️ Directory information
-            </div>
-          {/if}
-
+            {:else}
+            <a
+                href={place.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="place-link"
+            >
+                📍 View location →
+            </a>
+            {/if}
         </article>
       {/each}
 

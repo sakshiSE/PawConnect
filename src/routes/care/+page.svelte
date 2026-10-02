@@ -16,73 +16,85 @@
       category: 'Dogs',
       icon: '🐶',
       title: 'Basic Dog Care',
-      text: 'Learn about everyday routines, exercise, grooming, clean water, safe surroundings and responsible care.'
+      text: 'Learn about everyday routines, exercise, grooming, clean water, safe surroundings and responsible care.',
+      link:'https://www.royalkennelclub.com/health-and-dog-care/dog-care/dog-care-basics/'
     },
     {
       category: 'Cats',
       icon: '🐱',
       title: 'Basic Cat Care',
-      text: 'Understand everyday cat needs including food, clean water, hygiene, safe spaces and enrichment.'
+      text: 'Understand everyday cat needs including food, clean water, hygiene, safe spaces and enrichment.',
+      link: 'https://www.cats.org.uk/help-and-advice'
     },
     {
       category: 'Food',
       icon: '🥣',
       title: 'Food & Feeding',
-      text: 'Learn why animals need species-appropriate food, clean water and consistent feeding routines.'
+      text: 'Learn why animals need species-appropriate food, clean water and consistent feeding routines.',
+      link: 'https://www.aspca.org/pet-care/general-pet-care'
     },
     {
       category: 'Food',
       icon: '🚫',
       title: 'Foods to Avoid',
-      text: 'Some foods intended for people can be harmful to animals. Always check whether a food is safe before sharing it.'
+      text: 'Some foods intended for people can be harmful to animals. Always check whether a food is safe before sharing it.',
+      link: 'https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets'
     },
     {
       category: 'Safety',
       icon: '🏠',
       title: 'Create a Safe Home',
-      text: 'Keep dangerous substances, unsafe plants, electrical cables and small objects away from curious animals.'
+      text: 'Keep dangerous substances, unsafe plants, electrical cables and small objects away from curious animals.',
+      link: 'https://www.aspca.org/pet-care/aspca-poison-control/poisonous-household-products'
     },
     {
       category: 'Safety',
       icon: '🧼',
       title: 'Hygiene & Grooming',
-      text: 'Regular grooming and a clean living environment can support everyday comfort and cleanliness.'
+      text: 'Regular grooming and a clean living environment can support everyday comfort and cleanliness.',
+      link: 'https://www.royalkennelclub.com/health-and-dog-care/health-dog-care/health/health-and-care/a-z-of-health-and-care-issues/dog-grooming/'
     },
     {
       category: 'Dogs',
       icon: '🦮',
       title: 'Exercise & Enrichment',
-      text: 'Dogs benefit from appropriate physical activity, play and mental stimulation suited to their age and condition.'
+      text: 'Dogs benefit from appropriate physical activity, play and mental stimulation suited to their age and condition.',
+      link: 'https://www.royalkennelclub.com/health-and-dog-care/dog-care/dog-care-basics/'
     },
     {
       category: 'Cats',
       icon: '🧶',
       title: 'Cat Enrichment',
-      text: 'Safe play, scratching areas, hiding spaces and opportunities to explore can help keep cats engaged.'
+      text: 'Safe play, scratching areas, hiding spaces and opportunities to explore can help keep cats engaged.',
+      link: 'https://www.cats.org.uk/help-and-advice'
     },
     {
       category: 'Safety',
       icon: '💉',
       title: 'Preventive Care',
-      text: 'Regular veterinary checkups and appropriate vaccinations can help support an animal’s long-term wellbeing.'
+      text: 'Regular veterinary checkups and appropriate vaccinations can help support an animal’s long-term wellbeing.',
+      link: 'https://www.royalkennelclub.com/health-and-dog-care/dog-care/dog-care-basics/'
     },
     {
       category: 'Injured Animal',
       icon: '🆘',
       title: 'Found an Injured Animal?',
-      text: 'Keep yourself safe, avoid unnecessary handling, and seek appropriate veterinary or animal-welfare assistance.'
+      text: 'Keep yourself safe, avoid unnecessary handling, and seek appropriate veterinary or animal-welfare assistance.',
+      link: '/help'
     },
     {
       category: 'Injured Animal',
       icon: '❤️',
       title: 'How You Can Help',
-      text: 'If someone reports an injured animal on PawConnect, you can use the Animal Help section to offer assistance.'
+      text: 'If someone reports an injured animal on PawConnect, you can use the Animal Help section to offer assistance.',
+      link: '/help'
     },
     {
       category: 'Safety',
       icon: '🐾',
       title: 'Responsible Animal Care',
-      text: 'Animals depend on people for safe environments, appropriate care and responsible decisions.'
+      text: 'Animals depend on people for safe environments, appropriate care and responsible decisions.',
+      link: 'https://www.royalkennelclub.com/health-and-dog-care/dog-care/dos-and-donts-of-owning-a-dog/'
     }
   ];
 
@@ -212,7 +224,13 @@
           </p>
 
           <div class="read-label">
-            Read guide →
+            <a
+                href={guide.link}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Read guide →
+            </a>
           </div>
 
         </article>
