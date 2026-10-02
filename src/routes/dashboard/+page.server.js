@@ -1,0 +1,2 @@
+import { redirect } from '@sveltejs/kit'; import { query } from '$lib/server/db.js';
+export async function load({locals}){if(!locals.user)throw redirect(303,'/login');const [r,a,h]=await Promise.all([query('SELECT * FROM animal_reports WHERE user_id=$1 ORDER BY created_at DESC',[locals.user.id]),query('SELECT * FROM adoption_listings WHERE user_id=$1 ORDER BY created_at DESC',[locals.user.id]),query('SELECT * FROM help_requests WHERE user_id=$1 ORDER BY created_at DESC',[locals.user.id])]);return{reports:r.rows,listings:a.rows,requests:h.rows};}
