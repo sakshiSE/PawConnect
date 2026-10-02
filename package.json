@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "^6.3.4",
@@ -20,6 +19,7 @@
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.11.0",
     "pg": "^8.16.3"
   }
 }
