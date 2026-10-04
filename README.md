@@ -1,6 +1,7 @@
 # 🐾 PawConnect
 
 Simple SvelteKit full-stack MVP for animal help, adoption, and lost & found.
+Project Website: https://paw-connect-ivory.vercel.app/
 
 ## Stack
 - SvelteKit + Svelte
